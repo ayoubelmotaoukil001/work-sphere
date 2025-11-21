@@ -16,13 +16,68 @@ closeBtns.forEach(btn => {
 
 // Add employer
 const list_employer = document.getElementById("emplyers-list");
+const addExpBtn = document.getElementById("addExpBtn");
+const experienceForm = document.getElementById("experienceForm");
 
+// Toggle experience form ONLY
+addExpBtn.addEventListener("click", () => {
+    experienceForm.style.display =
+        experienceForm.style.display === "none" ? "flex" : "none";
+});
+
+// Function to create employee view modal
+function createViewModal(employee) {
+    const modal = document.createElement("div");
+    modal.className = "employee-view";
+
+    modal.innerHTML = `
+        <section>
+            <div class="headerr">
+                <div>
+                    <h1>${employee.name}</h1>
+                    <h2>${employee.role}</h2>
+                </div>
+                <img src="${employee.pic}" alt="" style="height:60px; border-radius:50%;">
+            </div>
+
+            <div class="experience-all">
+                <div class="header-experience"><h1>Experience</h1></div>
+                <div class="experience">
+                    <h2>Company: ${employee.company || "N/A"}</h2>
+                    <h2>Position: ${employee.position || "N/A"}</h2>
+                    <h2>Start: ${employee.date_start || "N/A"}</h2>
+                    <h2>End: ${employee.date_end || "N/A"}</h2>
+                </div>
+                <div class="contact">
+                    <h2>Email: ${employee.email || "N/A"}</h2>
+                    <h2>Phone: ${employee.phone || "N/A"}</h2>
+                </div>
+            </div>
+
+            <button class="close-view">Close</button>
+        </section>
+    `;
+
+    modal.querySelector(".close-view").addEventListener("click", () => {
+        modal.remove();
+    });
+
+    document.body.appendChild(modal);
+}
+
+// Submit employee
 document.querySelector(".submit-btn").addEventListener("click", (e) => {
     e.preventDefault();
 
     const name = document.getElementById("name").value;
     const role = document.getElementById("role").value;
     const pic  = document.getElementById("photo_url").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const company = document.getElementById("company_name")?.value;
+    const position = document.getElementById("position")?.value;
+    const date_start = document.getElementById("date_start")?.value;
+    const date_end = document.getElementById("date_end")?.value;
 
     if (!name || !role) {
         alert("fill all fields");
@@ -30,11 +85,8 @@ document.querySelector(".submit-btn").addEventListener("click", (e) => {
     }
 
     const employee = { 
-    name, 
-    role, 
-    pic,
-    inRoom: false   
-};
+        name, role, pic, email, phone, company, position, date_start, date_end, inRoom: false   
+    };
 
     allEmployees.push(employee);
 
@@ -50,13 +102,22 @@ document.querySelector(".submit-btn").addEventListener("click", (e) => {
         <div class="Role">
             <h2>${role}</h2>
         </div>
+        <button type="button" class="view-btn">View</button>
     `;
 
     list_employer.appendChild(card);
-
     form.style.display = "none";
+
+    // Clear fields
     document.getElementById("name").value = "";
     document.getElementById("role").value = "";
+    document.getElementById("photo_url").value = "";
+
+    // Add event for view button
+    const viewBtn = card.querySelector(".view-btn");
+    viewBtn.addEventListener("click", () => {
+        createViewModal(employee);
+    });
 });
 
 // Add to room
@@ -68,16 +129,12 @@ roomButtons.forEach(btn => {
         const role = btn.dataset.role;
         const roomDiv = btn.parentElement.nextElementSibling;
 
-       const filtered = allEmployees.filter(emp => {
-    if (emp.inRoom) return false;    
-    if (emp.role === "manager") return true;
-    if (role === "conference") return true;
-    return emp.role === role;
-});
-
-
-
-       
+        const filtered = allEmployees.filter(emp => {
+            if (emp.inRoom) return false;    
+            if (emp.role === "manager") return true;
+            if (role === "conference") return true;
+            return emp.role === role;
+        });
 
         const select = document.createElement("select");
         filtered.forEach(emp => {
@@ -124,39 +181,34 @@ roomButtons.forEach(btn => {
                 roomDiv.appendChild(empDiv);
 
                 const removeBtn = empDiv.querySelector(".removuserfromroom button");
-            removeBtn.addEventListener("click", () => {
-                empDiv.remove();
-                 empObj.inRoom = false; 
+                removeBtn.addEventListener("click", () => {
+                    empDiv.remove();
+                    empObj.inRoom = false; 
 
-                // Return employee to Employers section if not manager
-                if(empObj.role !== "manager"){
-                    const card = document.createElement("div");
-                    card.classList.add("inside");
-                    card.innerHTML = `
-                        <div class="img">
-                            <img src="${empObj.pic}">
-                        </div>
-                        <div class="name">
-                            <h1>${empObj.name}</h1>
-                        </div>
-                        <div class="Role">
-                            <h2>${empObj.role}</h2>
-                        </div>
-                    `;
-                    list_employer.appendChild(card);
-                }
-            });
-
+                    if(empObj.role !== "manager"){
+                        const card = document.createElement("div");
+                        card.classList.add("inside");
+                        card.innerHTML = `
+                            <div class="img">
+                                <img src="${empObj.pic}">
+                            </div>
+                            <div class="name">
+                                <h1>${empObj.name}</h1> 
+                            </div>
+                            <div class="Role">
+                                <h2>${empObj.role}</h2>
+                            </div>
+                        `;
+                        list_employer.appendChild(card);
+                    }
+                });
             }
-
 
             if(empObj.role !== "manager"){
                 const employerCards = Array.from(list_employer.children);
                 const cardToRemove = employerCards.find(card => card.querySelector(".name h1").textContent === empObj.name);
                 if (cardToRemove) cardToRemove.remove();
-            
             }
-
 
             container.remove();
         });
