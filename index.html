@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+    <header class="head"> 
+        <h1> WORKSPHERE </h1>
+        <hr class="hrr">
+    </header>
+
+    
+    <main class="main">
+       <section class="emplyers-section">
+        <div class="fixed">
+
+        <h1> Employers </h1>
+        <button  id="adduser" type="button" class="openAddUser butoooon">Add</button>
+
+         </div>
+
+
+        <div id="emplyers-list"> 
+            
+        </div>
+       
+       </section> 
+
+
+     
+      <section class="salle-section">
+    <div class="par"> 
+        
+        <div class="chi1"> 
+            <div class="headerofroom">
+                <img src="assets/images/congernce.png" alt="">
+                <p>Conference room</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="conference">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+        <div class="chi2">
+            <div class="headerofroom">
+                <img src="assets/images/security.png" alt=""> 
+                <p>Security room</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="security">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+        <div class="chi3"> 
+            <div class="headerofroom">
+                <img src="assets/images/server.png" alt="">
+                <p>Server room</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="server">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+        <div class="chi4"> 
+            <div class="headerofroom">
+                <img src="assets/images/receptioon.png" alt="">
+                <p>Reception</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="reception">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+        <div class="chi5"> 
+            <div class="headerofroom">
+                <img src="assets/images/staff.png" alt="">
+                <p>Staff room</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="staff">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+        <div class="chi6"> 
+            <div class="headerofroom">
+                <img src="assets/images/archive.png" alt="">
+                <p>Archive room</p>
+            </div>
+            <form>
+                <button type="button" class="add-to-room butoooon" data-role="archive">Add</button>
+            </form>
+            <div class="room-employees"></div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+     <div class="footerr"> <h1>WORKSPHERE</h1> </div>
+</footer>
+
+
+
+
+
+ <section class="add-user-form" id="form">
+
+
+
+ <div class="container">
+        
+       
+        <div class="header">
+            <h1>Add</h1>
+            
+            <button class="close-btn">X</button>
+        </div>
+        
+        <form>
+            
+           
+            <div>
+                <input type="text" id="name" name="name" placeholder="Nom:" >
+            </div>
+
+            
+            <div>
+                <select id="role" name="role">
+                    <option value="" disabled selected>Role:</option>
+                    <option value="manager">manager</option> <!-- Placeholder -->
+                    <option value="reception"> reception</option>
+                    <option value="staff">staff</option>
+                    <option value="security">security</option>
+                    <option value="server">server</option>
+                    <option value="archive">archive</option>
+
+                    
+                </select>
+            </div>
+
+           
+            <div>
+                <input type="url" id="photo_url"  placeholder="Photo (URL):" >
+            </div>
+
+          
+            <div>
+                <input type="email" id="email"  placeholder="Email:" >
+            </div>
+
+           
+            <div>
+                <input type="tel" id="phone"  placeholder="Téléphone:" >
+            </div>
+
+           
+            <div class="experience-section">
+                
+                <span>professional experiences</span>
+                
+                <button type="button" class="add-experience-btn">Add an experience</button>
+            </div>
+
+           
+            <div class="submit-btn-container">
+                <button type="submit" class="submit-btn">validat</button>
+            </div>
+        </form>
+        
+    </div>
+
+
+
+
+</section>
+
+<script src="all.js">
+  
+</script>
+
+
+</body>
+
+
+</html>
