@@ -454,3 +454,140 @@ border-radius: 1rem;
     margin-top: 10px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .emplyers-section {
+        width: 92%;
+        height:fit-content;
+        max-height: 450px;
+    }
+
+    .salle-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .par {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 150px);
+        gap: 20px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .par > div {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+        height: auto;
+    }
+
+    .headerofroom img {
+        height: 45px;
+    }
+
+    .room-employees {
+        max-height: 150px;
+    }
+    #emplyers-list
+    {
+      display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+    .inside
+    {
+      width: 200px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .emplyers-section {
+        width: 95%;
+        
+        height: auto;
+        max-height: 400px;
+        padding: 15px;
+    }
+
+    .salle-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .par {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 150px);
+        gap: 20px;
+        width: 95%;
+        margin: auto;
+    }
+
+    .par > div {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+        height: auto;
+    }
+
+    .headerofroom img {
+        height: 40px;
+    }
+
+    .room-employees {
+        max-height: 140px;
+    }
+    #emplyers-list
+    {
+      display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+}
+.inside button
+{
+  background-color: black ;
+  color:white;
+  padding: 10px;
+  height: fit-content;
+
+  border: none;
+  position: relative;
+  top: 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  
+}
+
+.inside button:hover
+{
+  background-color: red ;
+  color:black;
+  padding: 10px;
+  height: fit-content;
+
+  border: none;
+  position: relative;
+  top: 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  
+}
+
