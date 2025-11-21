@@ -1,0 +1,456 @@
+body
+{
+  background-color: #beb7a4;
+   font-family: 'inter', Arial, sans-serif;
+   font-weight: bold;
+   margin: 0;
+}
+.main
+{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.head
+{
+    text-align: center;
+    font-family:  sans-serif;
+       font-family: 'inter', Arial, sans-serif;
+       margin: 2rem;
+       margin-bottom: 3rem;
+}
+.hrr
+{
+  background-color: black;
+  height: 2px;
+}
+.emplyers-section {
+    width: 25%;  
+    background-color: #001524;
+    color: #7ca982;
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 670px; 
+    overflow-y: auto; 
+    padding: 20px;
+}
+
+.emplyers-section::-webkit-scrollbar {
+    width: 0.5px;
+}
+
+.emplyers-section::-webkit-scrollbar-thumb {
+    background-color: #10b981;
+    border-radius: 4px;
+}
+
+.emplyers-section::-webkit-scrollbar-track {
+    background-color: cb997e;
+}
+
+.fixed
+{
+  display: flex;
+  flex-direction: column;
+}
+.emplyers-section h1
+{
+ display: flex;
+ position: relative;
+ justify-content: center;
+ width: 100%;         
+}
+.emplyers-section form
+{
+ display: flex;
+ position: relative;
+ justify-self: center;
+ align-items:end;
+ width: 100%;         
+ justify-content: start;
+}
+.salle-section
+{
+ width: 80%;
+}
+.footerr
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.par
+{
+ display: grid;
+ width: fit-content;
+ grid-template-rows: repeat(6,120px);
+ grid-template-columns: repeat(10,100px);
+ gap: 20px;
+ width: fit-content;
+ font-family: sans-serif;
+ font-family: 'inter', Arial, sans-serif;
+} 
+.par div
+{
+  background-color:j ;
+}
+.par p {
+  font-family: 'inter', Arial, sans-serif;
+     font-size: 1.2rem;
+     margin: 0.5rem;
+}
+.chi1
+{
+    grid-column: 1/5;
+    grid-row: 1/3;
+    background-color: #F0EDCC ;
+     display: flex;
+     justify-content: center;
+    align-items: center;
+     flex-direction: column;
+     border-radius: 2rem;
+}
+
+.chi1 img
+{
+  height: 60px;
+}
+.chi2 img
+{
+  height: 80px;
+}
+.chi3 img
+{
+  height: 80px;
+}
+.chi4 img
+{
+  height: 80px;
+}
+.chi5 img
+{
+  height: 80px;
+}
+.chi6 img
+{
+  height: 80px;
+}
+.chi2 
+{
+    grid-column: 5/8;
+    grid-row : 1/4;
+    background-color: #F0EDCC; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+.chi3
+{
+    grid-column: 8/11;
+    grid-row : 1/4;
+    background-color: #F0EDCC; 
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    
+}
+.chi4{
+    grid-column: 1/5;
+    grid-row: 3/7;
+    background-color: #F0EDCC;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+.chi5
+{
+    grid-column: 5/8;
+    grid-row: 4/7;
+    background-color:  #F0EDCC;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+}
+.chi6
+{
+    grid-column: 8/11;
+    grid-row: 4/7;
+    background-color:  #F0EDCC;
+     display: flex;
+     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.butoooon
+{
+   width: 100%;
+   background-color: black;
+   color: white;
+   border: none;
+   padding: 10px;
+   border-radius: 12px;
+   cursor: pointer;
+   font-size: 1rem;
+   font-weight: bold;
+}
+.salle-section button:hover
+{
+  background-color: white;
+  color: black;
+}
+.emplyers-section button:hover
+{
+  background-color:#E26D5A;
+  color: white;
+}
+.footerr
+{
+    margin-top: 2rem;
+}
+.add-user-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  backdrop-filter: blur(5px);
+}
+
+#employers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.inside 
+{
+    width: 220px;
+    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #E26D5A;
+  padding: 20px;
+  border-radius:25px ;
+  height: fit-content;
+}
+.name 
+{
+  color: white;
+  font-size:0.4rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.Role
+{
+  display: flex;
+  align-items: center;
+  font-size: 0.5rem;
+  color: black;
+  position: relative;
+  top: 3px;
+  margin: 0;
+  padding: 0;
+}
+.Role h2
+{
+  margin: 0;
+}
+.name h1
+{
+  margin: 0;
+}
+
+.img img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+   position: relative;
+}
+.role
+{
+  display: flex;
+  align-items: center;
+}
+.employee
+{
+width: 110px;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+gap: 10px;
+background-color:#E26D5A;
+padding: 15px;
+height: fit-content;
+border-radius: 1rem;
+}
+
+.room-employees
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: 25px;
+  overflow-y: auto; 
+}
+
+.nameandrole
+{
+  gap: 1px;
+}
+.removuserfromroom button
+{
+  height: fit-content;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  left:35px;
+}
+.removuserfromroom button:hover
+{
+  background-color: red;
+  color: white;
+}
+.headerofroom {
+  margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.room-employees {
+  overflow-y: auto; 
+}
+
+.room-employees::-webkit-scrollbar {
+    width: 0.5px;  
+}
+
+.room-employees::-webkit-scrollbar-thumb {
+    background-color: #10b981; 
+    border-radius: 4px;
+}
+
+.room-employees::-webkit-scrollbar-track {
+    background-color: #cb997e;
+}
+.parent
+    {
+        background-color: #c2c2c2;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: fit-content;
+        padding: 20px;
+        padding-top: 0;
+        padding-right: 50px;
+        padding-left:30px ;
+        padding-bottom: 30px;
+        border-radius: 25px;
+    }
+    .parent input[type="text"]
+    {
+        width: 100%;
+        padding: 10px;
+        border:none;
+        border-radius: 25px;
+    }
+    .add-user-form .container {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+.parent h2
+{
+  font-size: 1.2rem;
+}
+.headerr img
+{
+     height: 60px;
+}
+.headerr
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.headerr h1
+{
+    color: #98c1d9;
+}
+.headerr h2
+{
+  color: #edebd7;
+}
+
+.experience-all h1
+{
+  color:#e63946;
+}
+.experience-all h2
+{
+  color:#f79256;
+}
+
+.employee-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.employee-view section {
+    background-color:#001524;
+    width: 400px;
+    max-height: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.employee-view button.close-view {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
