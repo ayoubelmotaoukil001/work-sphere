@@ -477,7 +477,7 @@ border-radius: 1rem;
     .par {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 150px);
+        grid-template-rows: repeat(3, 220px);
         gap: 20px;
         width: 95%;
         margin: auto;
@@ -534,7 +534,7 @@ border-radius: 1rem;
     .par {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 150px);
+        grid-template-rows: repeat(6, 220px);
         gap: 20px;
         width: 95%;
         margin: auto;
